@@ -9,8 +9,6 @@ router.post("/signup", function (req, res) {
   );
   signup(req.body)
     .then(function (data) {
-      res.cookie("username", req.body.username, { expires: farFuture });
-      res.cookie("email", req.body.email, { expires: farFuture });
       res.status(200);
       res.json(data);
     })
@@ -38,9 +36,6 @@ router.post("/login", function (req, res) {
               err,
             });
           } else {
-            res.cookie("username", data.username, { expires: farFuture });
-            res.cookie("email", req.body.email, { expires: farFuture });
-
             res.status(200);
             res.json({
               success: true,

@@ -14,8 +14,6 @@ router.get("/", middleware, function (req, res) {
 });
 
 router.get("/logout", middleware, function (req, res) {
-  res.clearCookie("username");
-  res.clearCookie("email");
   res.json({
     success: true,
   });
