@@ -18,7 +18,7 @@ function email(emailid, otp) {
       from: process.env.EMAIL_ID,
       to: emailid,
       subject: "Play-pics OTP",
-      html: `<b>Click <a href='http://localhost:3000/verify/${otp}'>here</a> to verify your account.</b>`,
+      html: `<b>Click <a href='http://pics-play.herokuapp.com/verify/${otp}'>here</a> to verify your account.</b>`,
     };
 
     client.sendMail(email, function (err, info) {
