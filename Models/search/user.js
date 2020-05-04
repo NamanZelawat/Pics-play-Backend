@@ -18,6 +18,7 @@ function user(username, keyword) {
             email: 1,
             friends: 1,
             pending: 1,
+            posts: 1,
           },
         },
       ])
@@ -34,10 +35,12 @@ function user(username, keyword) {
                 _id: 0,
                 friends: 1,
                 pending: 1,
+                posts: 1,
               },
             },
           ])
           .then(function (d) {
+            console.log;
             if (
               d[0].pending != undefined &&
               d[0].pending.some((pending) => pending.username === keyword)
@@ -66,6 +69,7 @@ function user(username, keyword) {
                 profileImg: data[0].profileImg,
                 friends: data[0].friends,
                 status: data[0].status,
+                posts: data[0].posts,
               },
             });
           })
