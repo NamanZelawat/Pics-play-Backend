@@ -22,15 +22,7 @@ function signup(body) {
             bio: "Pics-play is awesome.",
             friends: [],
             pending: [],
-            posts: [
-              {
-                username: "XX..MADE..BY..XX",
-                url:
-                  "https://github.com/NamanZelawat/Pics-play-Data/blob/master/eklavya/47c1ca60-aed9-4269-85b3-9b499c67d15a.png?raw=true",
-                date: "2020-04-30 10:24:16",
-                timestamp: Date.now(),
-              },
-            ],
+            posts: [],
           },
         },
         { upsert: true }
