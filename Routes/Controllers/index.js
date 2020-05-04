@@ -7,6 +7,7 @@ const post = require("./post");
 const me = require("./me");
 const search = require("./search");
 const otp = require("./otp");
+const pending = require("./pending");
 
 router.use("/", verify);
 router.use("/auth", auth);
@@ -15,5 +16,6 @@ router.use("/post", post);
 router.use("/me", me);
 router.use("/search", search);
 router.use("/otp", otp);
+router.use("/pending", pending);
 
 module.exports = router;
